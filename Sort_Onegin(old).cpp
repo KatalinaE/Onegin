@@ -13,99 +13,21 @@ struct Str{
 	int len; 
 };
 
-long long aaaaa;
-
-
 long fileSize(const char *fileName);
 
-//------------------------------------------------------------
-//! Loads the contents of the file into the buffer
-//!
-//! @param [in]  fileName - name of file
-//! @param [out]  buf - buffer
-//------------------------------------------------------------
 void load(char *buf, const char *fileName);
 
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  buf - buffer
-//! @param [in]  bufSize - size of buffer
-//!	@param [out] pstrs - pointer to array of strings
-//! @param [out] strn - quantity of strings
-//------------------------------------------------------------
 void link(char *buf, long bufSize, struct Str **pstrs, long *strn);
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  buf - buffer
-//! @param [in]  c - symbol to quantity
-//! 
-//! @return Quantity
-//------------------------------------------------------------
 long count(char *buf, char c);
 
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  strs - array of strings
-//! @param [in]  strn - quantity of strings 
-//------------------------------------------------------------
 void sort(struct Str strs[], int strn);
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  strs - array of strings 
-//! @param [in]  first - index of the first element 
-//! @param [in]  last - index of the last element
-//------------------------------------------------------------
 void quickSort(struct Str strs[], int first, int last);
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  a - pointer to first string 
-//! @param [in]  b - pointer to second string
-//! 
-//! @return True or false
-//------------------------------------------------------------
 int good(struct Str *a, struct Str *b);
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  a - first value
-//! @param [in]  b - second value
-//! 
-//! @return Minimum of a and b
-//------------------------------------------------------------
 int min(int a, int b);
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  strs - array of strings
-//! @param [in]  pos1 - index of first string
-//! @param [in]	 pos2 - index of second string
-//------------------------------------------------------------
-void swap(struct Str strs[], int pos1, int pos2);
+void swap(struct Str strs[], int a, int b);
 
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  strs - array of strings  
-//! @param [in]  strn - quantity of strings
-//! @param [in]  fileName - name of file
-//------------------------------------------------------------
 void save(struct Str strs[], int strn, const char *fileName);
 
-//------------------------------------------------------------
-//! 
-//!
-//! @param [in]  argc - quantity of parameters of command line
-//! @param [in]  argv - array of parameters accepted as strings
-//! 
-//! @return Error number
-//!
-//! @note If not errors return 0
-//------------------------------------------------------------
 int main(int argc, char **argv)
 {
 	if (argc != 3)
