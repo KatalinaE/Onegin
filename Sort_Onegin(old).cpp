@@ -15,13 +15,7 @@ struct Str{
 
 long long aaaaa;
 
-//------------------------------------------------------------
-//! Calculates file size  
-//!
-//! @param [in]  fileName - name of file
-//! 
-//! @return fileSize
-//------------------------------------------------------------
+
 long fileSize(const char *fileName);
 
 //------------------------------------------------------------
