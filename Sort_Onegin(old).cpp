@@ -13,6 +13,8 @@ struct Str{
 	int len; 
 };
 
+long long aaaaa;
+
 //------------------------------------------------------------
 //! Calculates file size  
 //!
